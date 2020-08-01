@@ -8,10 +8,12 @@ import { CHECK_AUTH } from "./store/actions.type";
 import ApiService from "./common/api.service";
 import DateFilter from "./common/date.filter";
 import ErrorFilter from "./common/error.filter";
+import NotificationPlugin from "./common/notification.plugin";
 
 Vue.config.productionTip = false;
 Vue.filter("date", DateFilter);
 Vue.filter("error", ErrorFilter);
+Vue.use(NotificationPlugin.notify);
 
 ApiService.init();
 

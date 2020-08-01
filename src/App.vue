@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <NotificationList />
     <RwvHeader />
     <router-view></router-view>
     <RwvFooter />
